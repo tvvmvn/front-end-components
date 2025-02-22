@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    body {
+      height: calc(100vh + 100px);
+    }
+
+    .side-bar {
+      /* fixed */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 14rem;
+      height: 100%;
+      box-sizing: border-box;
+      /* design */
+      background-color: #ddd;
+      padding: 1rem;
+      /* anime */
+      transition: 0.2s;
+    }
+    
+    .hidden {
+      left: -14rem;
+    }
+  </style>
+
+  <nav id="navBar" class="side-bar hidden">
+    <h1 class="logo">Side Bar</h1>
+    <button class="" onclick="closeMenu()">Close</button>
+  </nav>
+  
+  <main>
+    <h1>Contents</h1>
+    <button class="btn" onclick="openMenu()">Menu</button>
+  </main>
+
+  <script>
+    function openMenu() {
+      navBar.classList.remove("hidden");
+    }
+
+    function closeMenu() {
+      navBar.classList.add("hidden");
+    }
+  </script>
+
+</body>
+</html>
