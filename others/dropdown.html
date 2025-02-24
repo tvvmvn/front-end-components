@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Dropdown</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      position: relative;
+    }
+
+    .btn {
+      padding: 0.5rem;
+    }
+
+    .content {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 200px;
+      padding: 0 1rem;
+      position: absolute;
+      top: 50px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <div class="container">
+    <button class="btn" onclick="f(this)">Dropdown</button>
+    <div class="content hidden">
+      <p>dropdown content</p>
+      <p>dropdown content</p>
+      <p>dropdown content</p>
+    </div>
+  </div>
+
+  <p>...</p>
+
+  <script>
+    function f(el) {
+      var content = el.nextElementSibling;
+
+      content.classList.toggle("hidden");
+    }
+  </script>
+  
+</body>
+</html>

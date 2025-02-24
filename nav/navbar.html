@@ -8,6 +8,10 @@
 <body>
 
   <style>
+    body {
+      height: calc(100vh * 2);
+    }
+
     header {
       position: fixed;
       top: 0;
@@ -18,36 +22,45 @@
 
     .header-inner {
       display: flex;
+      border-bottom: 1px solid;
     }
 
-    .menu-btn {
-      padding: 1rem;
+    .btn {
+      padding: 0.75rem;
+      border: none;
+      background-color: transparent;
     }
 
-    .logo {
-      margin-left: 1rem;
+    .link {
+      display: block;
+      padding: 0.75rem;
+      color: #000;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 
   <header>
     <div class="header-inner">
-      <button class="menu-btn">Menu</button>
-      <div class="logo">Logo</div>
+      <button class="btn" onclick="f()">Menu</button>
     </div>
 
     <!-- menu -->
-    <ul>
-      <li>
-        <a href="#">Link</a>
-      </li>
-      <li>
-        <a href="#">Link</a>
-      </li>
-      <li>
-        <a href="#">Link</a>
-      </li>
-    </ul>
+    <div id="menu" class="hidden">
+      <a href="#" class="link">Link</a>
+      <a href="#" class="link">Link</a>
+      <a href="#" class="link">Link</a>
+      <a href="#" class="link">Link</a>
+    </div>
   </header>
+
+  <script>
+    function f() {
+      menu.classList.toggle("hidden");
+    }
+  </script>
 
 </body>
 </html>

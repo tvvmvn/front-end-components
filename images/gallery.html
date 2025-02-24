@@ -8,6 +8,46 @@
 <body>
 
   <h1>Gallery</h1>
-  
+
+  <style>
+    img {
+      object-fit: cover;
+    }
+
+    .main-image {
+      width: 300px;
+      height: 300px;
+    }
+
+    .photos {
+      display: flex;
+      width: 300px;  
+    }
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      opacity: 0.5;
+    }
+
+    .photo:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <img id="mainImage" class="main-image" src="https://tvvmvn.github.io/resource/img/simba.webp" alt="">
+
+  <div class="photos">
+    <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/simba.webp" alt="">
+    <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/timon.jpeg" alt="">
+    <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/pumbaa.webp" alt="">
+  </div>
+
+  <script>
+    function f(src) { 
+      mainImage.src = src;
+    }
+  </script>
+
 </body>
 </html>

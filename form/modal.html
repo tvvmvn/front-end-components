@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Modal</h1>
+
+  <style>
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .modal {
+      width: 300px;
+      background-color: #fff;
+      margin: 100px auto 0;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .closeBtn {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  </style>
+
+  <button class="openBtn" onclick="openModal()">open</button>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="modal">
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis, animi magnam quaerat fuga autem, inventore ut possimus libero, dignissimos recusandae a. Quae, aut repudiandae eligendi esse atque a doloribus?
+      </h2>
+      <button class="closeBtn" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      overlay.classList.remove("hidden");
+    }
+
+    function closeModal() {
+      overlay.classList.add("hidden");
+    }
+  </script>
+  
+</body>
+</html>

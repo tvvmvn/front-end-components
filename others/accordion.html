@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Accordion</h1>
+
+  <style>
+    .btn {
+      padding: 0.5rem;
+      width: 100%;
+      text-align: left;
+      background-color: #fff;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    .active {
+      border-bottom: 1px solid #0bf;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <section>
+    <div class="item">
+      <button class="btn" onclick="f(this)">Apple</button>
+      <div class="content hidden">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi in deserunt hic ducimus laboriosam dignissimos omnis vel aspernatur! Sed perferendis maiores adipisci explicabo natus quasi, ex libero repudiandae dolores.
+        </p>
+      </div>
+    </div>
+    <div class="item">
+      <button class="btn" onclick="f(this)">Banana</button>
+      <div class="content hidden">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi in deserunt hic ducimus laboriosam dignissimos omnis vel aspernatur! Sed perferendis maiores adipisci explicabo natus quasi, ex libero repudiandae dolores.
+        </p>
+      </div>
+    </div>
+    <div class="item">
+      <button class="btn" onclick="f(this)">Kiwi</button>
+      <div class="content hidden">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi in deserunt hic ducimus laboriosam dignissimos omnis vel aspernatur! Sed perferendis maiores adipisci explicabo natus quasi, ex libero repudiandae dolores.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function f(el) {
+      el.classList.toggle("active");
+
+      var content = el.nextElementSibling;
+
+      content.classList.toggle("hidden");
+    }
+  </script>
+  
+</body>
+</html>
