@@ -13,37 +13,42 @@
       margin: 0;
     }
 
-    .background {
-      height: 400px;
-      /* linear-gradient(direction, color-stop1, color-stop2, ..) */
-      background-image: linear-gradient(to right, #333, #000);
-    }
-
     .container {
-      /* border: 1px dashed; */
       /* size */
-      max-width: 640px;
-      height: inherit;
+      height: 400px;
       /* layout */
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      margin: 0 auto;
-      padding: 0 1rem;
-      /* design */
-      color: #fff;
+      /* bg image */
+      background-image: url("https://tvvmvn.github.io/resource/img/hakuna-matata.jpg");
+      background-position: center;
+      background-size: cover;
     }
 
     .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .title {
+      font-size: 4rem;
       text-align: center;
+      color: #fff;
+    }
+
+    .sub-title {
+      text-align: center;
+      color: #fff;
     }
   </style>
 
-  <div class="background">
-    <div class="container">
-      <h1 class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <div class="container">
+    <div class="text">
+      <h1 class="title">
+        HAKUNA MATATA
       </h1>
+      <h2 class="sub-title">Timon & Pumbaa</h2>
     </div>
   </div>
 

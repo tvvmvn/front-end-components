@@ -30,7 +30,7 @@
       opacity: 0.5;
     }
 
-    .photo:hover {
+    .active {
       opacity: 1;
     }
   </style>
@@ -38,14 +38,26 @@
   <img id="mainImage" class="main-image" src="https://tvvmvn.github.io/resource/img/simba.webp" alt="">
 
   <div class="photos">
-    <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/simba.webp" alt="">
+    <img class="photo active" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/simba.webp" alt="">
     <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/timon.jpeg" alt="">
     <img class="photo" onclick="f(this.src)" src="https://tvvmvn.github.io/resource/img/pumbaa.webp" alt="">
   </div>
 
   <script>
-    function f(src) { 
-      mainImage.src = src;
+    var photos = document.getElementsByClassName("photo");
+
+    function f(newSrc) { 
+      // update main image
+      mainImage.src = newSrc;
+
+      // active
+      for (var i = 0; i < photos.length; i++) {
+        if (photos[i].src == newSrc) {
+          photos[i].classList.add("active");
+        } else {
+          photos[i].classList.remove("active");
+        }
+      }
     }
   </script>
 
